@@ -11,7 +11,6 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "postinstall": "grunt uglify",
     "start": "node index.js"
   },
   "dependencies": {
