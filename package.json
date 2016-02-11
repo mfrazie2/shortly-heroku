@@ -11,6 +11,7 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
+    "postinstall": "grunt heroku",
     "start": "node index.js"
   },
   "dependencies": {
