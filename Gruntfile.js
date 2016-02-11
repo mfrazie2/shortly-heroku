@@ -116,10 +116,14 @@ module.exports = function(grunt) {
     'mochaTest'
   ]);
 
+  grunt.registerTask('heroku', [
+      'uglify',
+      'cssmin'
+  ]);
+
   grunt.registerTask('build', [
     'concat', 
-    'uglify',
-    'cssmin'
+    'heroku'
   ]);
 
   grunt.registerTask('upload', function(n) {
