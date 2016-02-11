@@ -11,7 +11,7 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "postinstall": "grunt heroku",
+    "postinstall": "grunt uglify",
     "start": "node index.js"
   },
   "dependencies": {
