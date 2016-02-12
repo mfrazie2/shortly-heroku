@@ -25,11 +25,12 @@ userSchema.comparePassword = function(attemptedPassword, hashedPassword, callbac
   });
 };
 
-userSchema.pre('save', function(){
+userSchema.pre('save', function(next){
   var cipher = bluebird.promisify(bcrypt.hash);
   return cipher(this.password, null, null).bind(this)
     .then(function(hash) {
       this.password = hash;
+      next();
   });
 });
 

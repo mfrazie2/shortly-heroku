@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost:5000/data/db/shortlydb'
+mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/shortlydb';
 mongoose.connect(mongoURI);
 
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection.eror: '));
+db.on('error', console.error.bind(console, 'connection.error: '));
 db.once('open', function(){
   console.log('Mongoose connection open');
 });
